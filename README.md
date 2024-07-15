@@ -1,6 +1,3 @@
-**The development of OBIA4RTM is discontinued in favor of the [Earth Observation Data Analysis Library EOdal](https://github.com/EOA-team/eodal)**.
-
-[logo]: https://github.com/lukasValentin/OBIA4RTM/blob/master/obia4rtm_logo.JPG "OBIA4RTM logo"
 **OBIA4RTM**
 ------------
 [![DOI](https://zenodo.org/badge/184379375.svg)](https://zenodo.org/badge/latestdoi/184379375) [![Python 3.6](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/) [![Coverage Status](https://coveralls.io/repos/github/lukasValentin/OBIA4RTM/badge.svg?branch=master)](https://coveralls.io/github/lukasValentin/OBIA4RTM?branch=master) [![Build Status](https://travis-ci.com/lukasValentin/OBIA4RTM.svg?branch=master)](https://travis-ci.com/lukasValentin/OBIA4RTM) [![Documentation Status](https://readthedocs.org/projects/obia4rtm/badge/?version=latest)](https://obia4rtm.readthedocs.io/en/latest/genindex.html) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
@@ -190,19 +187,3 @@ For demonstration, some sample code is available in a Jupyter Notebook https://g
 ### Inversion
 
 The inversion (i.e. derivation of plant biochemical and biophysical parameters) is done numerically since the invserse of the radiative transfer equations is not defined analytically. OBIA4RTM therefore uses a cost function to find the closest match between the satellite-derived and ProSAIL-modelled spectra per land use/cover class. Currently, only the **root mean squared error (RMSE)** is supported as cost function since it is very simple and computational effecient. Future versions of OBIA4RTM might also include additional and more advanced cost functions. To ensure the **numerical stability of the inversion** the user can specify that the average of the best *n* solutions is used in terms of the lowest RMSE. *n* can range between 1 and *N*, where *N* is the number of spectra in the LUT even that makes not really sense from a physical point of view since the average of all spectra in the LUT will most likely not correspond to a physically meaningful solution.
-
-
-Demodata produced with OBIA4RTM
--------------------------------
-
-Sample data can be found here: http://dx.doi.org/10.17632/vs55cwssyh.1 showing some Sentinel-2 data that was processed using OBIA4RTM in an agricultural area in Southern Germany.
-
-Publications
-------------
-Lukas Graf, Levente Papp & Stefan Lang (2020) OBIA4RTM – towards an operational open-source solution for coupling object-based image analysis with radiative transfer modelling, European Journal of Remote Sensing, DOI: 10.1080/22797254.2020.1810132
-
-OBIA4RTM
---------
-[![DOI](https://zenodo.org/badge/184379375.svg)](https://zenodo.org/badge/latestdoi/184379375)
-
-
